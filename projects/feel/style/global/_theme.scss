@@ -1,0 +1,107 @@
+@mixin theme(
+  $c-primary: #f16827,
+  $c-primary-l: #ef7743,
+  $c-primary-d: #9d3a0a,
+
+  $c-secondary: #2c2c31,
+  $c-secondary-l: #3b3b42,
+  $c-secondary-d: #1e1e20,
+
+  $c-ternary: #fff,
+  $c-ternary-l: #fff,
+  $c-ternary-d: #fff,
+
+  $c-good: #2f9617,
+  $c-good-l: #3ec91f,
+  $c-good-d: #277e14,
+
+  $c-danger: #b0151f,
+  $c-danger-l: #ef2149,
+  $c-danger-d: #770a1f,
+
+  $f-family: '"DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+  $f-family-mono: '"DM Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+  $f-size: 1rem,
+  $f-size-small: 0.9rem,
+  $f-size-mono: 1rem,
+  $f-weight: 400,
+  $f-weight-bold: 700,
+  $f-color: var(--c-secondary),
+  $f-color-dark: var(--c-ternary),
+  $f-color-inverted: var(--c-ternary),
+  $f-color-inverted-dark: var(--c-secondary),
+
+  $s-unit: 1rem,
+  $s-content: calc(1000 * var(--s-unit) / 16),
+  $s-padding: var(--s-unit),
+
+  $c-page: var(--c-ternary-d),
+  $c-page-dark: var(--c-secondary-d),
+
+  $c-card: var(--c-ternary),
+  $c-card-dark: var(--c-secondary),
+  $c-card-secondary: var(--c-ternary-l),
+  $c-card-secondary-dark: var(--c-secondary-l),
+
+  $c-control: #fff,
+  $c-control-secondary: #fff,
+  $c-control-ternary: #fff,
+) {
+  :root {
+    --c-primary: #{$c-primary};
+    --c-primary-l: #{$c-primary-l};
+    --c-primary-d: #{$c-primary-d};
+
+    --c-secondary: #{$c-secondary};
+    --c-secondary-l: #{$c-secondary-l};
+    --c-secondary-d: #{$c-secondary-d};
+
+    --c-ternary: #{$c-ternary};
+    --c-ternary-l: #{$c-ternary-l};
+    --c-ternary-d: #{$c-ternary-d};
+
+    --c-good: #{$c-good};
+    --c-good-l: #{$c-good-l};
+    --c-good-d: #{$c-good-d};
+
+    --c-danger: #{$c-danger};
+    --c-danger-l: #{$c-danger-l};
+    --c-danger-d: #{$c-danger-d};
+
+    --f-family: #{$f-family};
+    --f-family-mono: #{$f-family-mono};
+    --f-size: #{$f-size};
+    --f-size-small: #{$f-size-small};
+    --f-size-mono: #{$f-size-mono};
+    --f-weight: #{$f-weight};
+    --f-weight-bold: #{$f-weight-bold};
+    --f-color: #{$f-color};
+    --f-color-inverted: #{$f-color-inverted};
+
+    --s-unit: #{$s-unit};
+    --s-content: #{$s-content};
+    --s-padding: #{$s-padding};
+
+    --c-page: #{$c-page};
+    --c-card: #{$c-card};
+    --c-card-secondary: #{$c-card-secondary};
+    --c-control: #{$c-control};
+    --c-control-secondary: #{$c-control-secondary};
+    --c-control-ternary: #{$c-control-ternary};
+
+    @media(prefers-color-scheme: dark) {
+      --c-page: #{$c-page-dark};
+      --c-card: #{$c-card-dark};
+      --c-card-secondary: #{$c-card-secondary-dark};
+      --f-color: #{$f-color-dark};
+    }
+  }
+
+  body.dark {
+    --c-page: #{$c-page-dark};
+    --c-card: #{$c-card-dark};
+    --c-card-secondary: #{$c-card-secondary-dark};
+    --f-color: #{$f-color-dark};
+    --f-color-inverted: #{$f-color-inverted-dark};
+  }
+}

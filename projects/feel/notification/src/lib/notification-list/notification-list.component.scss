@@ -1,0 +1,10 @@
+@import "vars";
+
+:host {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}

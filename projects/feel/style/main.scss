@@ -1,0 +1,19 @@
+@import "./styles/globals/vars";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $c-page;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: $c-primary;
+  color: $c-secondary;
+}
+
+@import "./styles/font";
