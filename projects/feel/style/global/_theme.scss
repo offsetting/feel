@@ -40,12 +40,12 @@
   $s-padding: var(--s-unit),
 
   $c-page: var(--c-ternary),
-  $c-page-dark: var(--c-secondary-d),
+  $c-page-dark: var(--c-secondary),
 
-  $c-card: var(--c-ternary-d),
-  $c-card-dark: var(--c-secondary),
-  $c-card-secondary: var(--c-ternary-l),
-  $c-card-secondary-dark: var(--c-secondary-l),
+  $c-card: var(--c-ternary-l),
+  $c-card-dark: var(--c-secondary-l),
+  $c-card-secondary: var(--c-ternary-ll),
+  $c-card-secondary-dark: var(--c-secondary-ll),
 
   $c-control: #fff,
   $c-control-secondary: #fff,
