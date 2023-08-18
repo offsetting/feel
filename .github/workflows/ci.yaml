@@ -85,7 +85,7 @@ jobs:
 
     strategy:
       matrix:
-        module: [ style, notification ]
+        module: [ style, notification, form ]
 
     steps:
       - uses: actions/checkout@v3
