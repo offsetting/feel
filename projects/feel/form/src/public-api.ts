@@ -1,6 +1,4 @@
-/*
- * Public API Surface of form
- */
-
-export * from './lib/form.service';
-export * from './lib/form.component';
+export * from "./lib/button/button.component";
+export * from "./lib/checkbox/checkbox.component";
+export * from "./lib/form-error/form-error.component";
+export * from "./lib/text-field/text-field.component";

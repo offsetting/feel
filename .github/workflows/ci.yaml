@@ -63,6 +63,7 @@ jobs:
         run: |
           sed -i'' "s/0\\.0\\.0-git/${{ steps.meta.outputs.version }}/" projects/feel/style/package.json
           sed -i'' "s/0\\.0\\.0-git/${{ steps.meta.outputs.version }}/" projects/feel/notification/package.json
+          sed -i'' "s/0\\.0\\.0-git/${{ steps.meta.outputs.version }}/" projects/feel/form/package.json
 
       - uses: actions/setup-node@v3
         with:
