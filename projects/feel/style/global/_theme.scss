@@ -3,13 +3,17 @@
   $c-primary-l: #ef7743,
   $c-primary-d: #9d3a0a,
 
-  $c-secondary: #2c2c31,
-  $c-secondary-l: #3b3b42,
-  $c-secondary-d: #1e1e20,
+  $c-secondary: #000,
+  $c-secondary-l: #181818,
+  $c-secondary-ll: #212121,
+  $c-secondary-d: #0c1016,
 
-  $c-ternary: #fff,
+  $c-ternary: #e8e8e8,
   $c-ternary-l: #fff,
-  $c-ternary-d: #fff,
+  $c-ternary-ll: #f5f5f5,
+  $c-ternary-d: #f0f0f0,
+
+  $c-gray: #bebebe,
 
   $c-good: #2f9617,
   $c-good-l: #3ec91f,
@@ -35,10 +39,10 @@
   $s-content: calc(1000 * var(--s-unit) / 16),
   $s-padding: var(--s-unit),
 
-  $c-page: var(--c-ternary-d),
+  $c-page: var(--c-ternary),
   $c-page-dark: var(--c-secondary-d),
 
-  $c-card: var(--c-ternary),
+  $c-card: var(--c-ternary-d),
   $c-card-dark: var(--c-secondary),
   $c-card-secondary: var(--c-ternary-l),
   $c-card-secondary-dark: var(--c-secondary-l),
@@ -48,17 +52,23 @@
   $c-control-ternary: #fff,
 ) {
   :root {
+    color-scheme: light dark;
+
     --c-primary: #{$c-primary};
     --c-primary-l: #{$c-primary-l};
     --c-primary-d: #{$c-primary-d};
 
     --c-secondary: #{$c-secondary};
     --c-secondary-l: #{$c-secondary-l};
+    --c-secondary-ll: #{$c-secondary-ll};
     --c-secondary-d: #{$c-secondary-d};
 
     --c-ternary: #{$c-ternary};
     --c-ternary-l: #{$c-ternary-l};
+    --c-ternary-ll: #{$c-ternary-ll};
     --c-ternary-d: #{$c-ternary-d};
+
+    --c-gray: #{$c-gray};
 
     --c-good: #{$c-good};
     --c-good-l: #{$c-good-l};
