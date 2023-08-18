@@ -1,0 +1,45 @@
+@import "vars";
+
+:host {
+  label {
+    display: flex;
+    flex-direction: column;
+
+    input, textarea {
+      outline: none;
+      background-color: $c-page;
+      border: 0.1rem solid $c-page;
+      padding: 0.4rem;
+      border-radius: 0.5rem;
+
+      transition: 150ms ease-in-out background-color, 150ms ease-in-out border-color;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    &:hover {
+      input, textarea {
+        background-color: $c-card-secondary;
+        border-color: $c-card-secondary;
+      }
+    }
+  }
+
+  &.ng-touched.ng-dirty {
+    &.ng-invalid, &.own-dirty {
+      label {
+        input, textarea {
+          border-color: $c-danger-d;
+        }
+      }
+    }
+  }
+
+  &:focus-within label {
+    input, textarea {
+      border-color: $c-primary;
+    }
+  }
+}

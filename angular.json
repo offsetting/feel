@@ -68,6 +68,39 @@
           }
         }
       }
+    },
+    "@feel/form": {
+      "projectType": "library",
+      "root": "projects/feel/form",
+      "sourceRoot": "projects/feel/form/src",
+      "prefix": "feel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/feel/form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/feel/form/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/feel/form/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/feel/form/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

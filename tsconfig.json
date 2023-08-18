@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@feel/form": [
+        "dist/feel/form"
+      ],
       "@feel/notification": [
         "dist/feel/notification"
       ],
