@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FormErrorComponent } from './form-error.component';
+import {FormErrorComponent} from './form-error.component';
 
 describe('FormErrorComponent', () => {
   let component: FormErrorComponent;
