@@ -1,0 +1,28 @@
+@import "vars";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: $s-unit;
+  padding: $s-padding;
+  max-width: $s-content;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(3 * $s-unit) 0;
+
+  h1 {
+    font-size: calc(6 * $s-unit);
+  }
+}
+
+.card {
+  background-color: $c-card;
+  border: 0.1rem solid $c-card-secondary;
+  padding: $s-padding;
+  border-radius: calc(0.4 * $s-unit);
+}

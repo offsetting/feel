@@ -32,6 +32,9 @@ dependencies:
   '@angular/router':
     specifier: ^16.2.1
     version: 16.2.1(@angular/common@16.2.1)(@angular/core@16.2.1)(@angular/platform-browser@16.2.1)(rxjs@7.8.0)
+  '@fontsource/dm-sans':
+    specifier: ^5.0.9
+    version: 5.0.9
   rxjs:
     specifier: ~7.8.0
     version: 7.8.0
@@ -2135,6 +2138,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/dm-sans@5.0.9:
+    resolution: {integrity: sha512-DdnfTba2Xsk0cQSKiJCiUmrdfLtP/rT/pfb66FxzI+jq4tXNc74oHNTvBgHaZ19gvuxo3Pr/YnPrtDQjsnj6kw==}
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}

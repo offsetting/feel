@@ -1,0 +1,13 @@
+{
+  "name": "@feel/layout",
+  "version": "0.0.0-git",
+  "peerDependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@feel/style": "0.0.0-git"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

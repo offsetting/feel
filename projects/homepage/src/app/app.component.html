@@ -1,0 +1,45 @@
+<div class="hero">
+  <h1>Feel</h1>
+</div>
+
+<div class="typography card">
+  <p>Feel is an <a href="https://angular.io" target="_blank">Angular</a> component library.</p>
+</div>
+
+<feel-flex-grid [minWidth]="'14rem'">
+  <div class="card typography">
+    <h1>Style</h1>
+    <p>is the base required for all projects, it provides all necessary css variables.</p>
+  </div>
+  <div class="card typography">
+    <h1>Notification</h1>
+    <p>is a toast like notification system.</p>
+    <feel-button label="Example" (click)="notificationExample()"/>
+  </div>
+  <div class="card typography">
+    <h1>Form</h1>
+    <p>provides form components, e.g. a Button, a Textfield and a Checkbox</p>
+  </div>
+  <div class="card typography">
+    <h1>Layout</h1>
+    <p>contains utilities for placing groups of element. Have a look at this grid while changing the window width.</p>
+  </div>
+</feel-flex-grid>
+
+<div class="typography card">
+  <h2>Usage</h2>
+  <ol>
+    <li>Add<code>@feel:registry=https://git.offsetting.dev/api/packages/offsetting/npm/</code> to your
+      <code>.npmrc</code>.
+    </li>
+    <li>Install styling base using <code>pnpm add @feel/style</code>.</li>
+    <li>Add <code>node_modules/@feel/style/main.scss</code> as an additional stylesheet in your
+      <code>angular.json</code></li>
+    <li>Add <code>node_modules/@feel/style/global</code> to the global style imports.</li>
+    <li>Include<code>@import "theme"; @include theme();</code>into your base stylesheet.</li>
+  </ol>
+</div>
+
+<router-outlet/>
+
+<feel-notification-list></feel-notification-list>

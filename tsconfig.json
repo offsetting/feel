@@ -6,6 +6,9 @@
       "@feel/form": [
         "dist/feel/form"
       ],
+      "@feel/layout": [
+        "dist/feel/layout"
+      ],
       "@feel/notification": [
         "dist/feel/notification"
       ],

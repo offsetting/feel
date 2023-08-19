@@ -1,0 +1,58 @@
+$spacing: calc(0.5 * $s-unit);
+
+.typography {
+  h1, h2, h3, h4, h5, h6, h7 {
+    &:not(:first-child) {
+      padding-top: $spacing;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6, h7, p, img, ul, ol {
+    &:not(:last-child) {
+      margin-bottom: $spacing
+    }
+  }
+
+  ul {
+    margin-left: calc($s-unit);
+  }
+
+  ol {
+    margin-left: calc(2 * $s-unit);
+  }
+
+  ul li::marker {
+    content: '-';
+  }
+
+  ol, ul {
+    li {
+      padding-left: calc(0.5 * $s-unit);
+
+      &::marker {
+        color: $c-primary;
+        font-weight: $f-weight-bold;
+      }
+    }
+  }
+
+  code {
+    display: inline-block;
+    background-color: $c-page;
+    padding: calc(0.2 * $s-unit) calc(0.4 * $s-unit);
+    border-radius: calc(0.4 * $s-unit);
+  }
+
+  a {
+    color: $f-color;
+    outline: none;
+    text-decoration: none;
+    border-bottom: calc(.15 * $s-unit) solid $c-primary;
+    transition: background-color .15s ease-in-out, color .15s ease-in-out;
+
+    &:hover {
+      background-color: $c-primary;
+      color: $c-secondary;
+    }
+  }
+}

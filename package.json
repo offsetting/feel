@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ci": "ng build @feel/style && ng build @feel/notification && ng build @feel/form",
+    "build:ci": "ng build @feel/style && ng build @feel/notification && ng build @feel/form && ng build @feel/layout",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^16.2.1",
     "@angular/platform-browser-dynamic": "^16.2.1",
     "@angular/router": "^16.2.1",
+    "@fontsource/dm-sans": "^5.0.9",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
