@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { IconDashboardComponent } from './icon-dashboard.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {IconDashboardComponent} from './icon-dashboard.component';
 
 describe('IconDashboardComponent', () => {
   let component: IconDashboardComponent;

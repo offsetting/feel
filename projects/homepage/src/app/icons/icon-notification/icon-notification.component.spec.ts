@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { IconNotificationComponent } from './icon-notification.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {IconNotificationComponent} from './icon-notification.component';
 
 describe('IconNotificationComponent', () => {
   let component: IconNotificationComponent;

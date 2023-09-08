@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { IconStyleComponent } from './icon-style.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {IconStyleComponent} from './icon-style.component';
 
 describe('IconStyleComponent', () => {
   let component: IconStyleComponent;

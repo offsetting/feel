@@ -1,5 +1,4 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {FormErrorComponent} from './form-error.component';
 
 describe('FormErrorComponent', () => {

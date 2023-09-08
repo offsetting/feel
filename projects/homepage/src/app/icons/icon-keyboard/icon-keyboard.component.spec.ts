@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { IconKeyboardComponent } from './icon-keyboard.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {IconKeyboardComponent} from './icon-keyboard.component';
 
 describe('IconKeyboardComponent', () => {
   let component: IconKeyboardComponent;
