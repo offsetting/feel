@@ -25,4 +25,12 @@
   border: 0.1rem solid $c-card-secondary;
   padding: $s-padding;
   border-radius: calc(0.4 * $s-unit);
+
+  display: flex;
+  gap: 1rem;
+
+  .icon {
+    min-width: 5rem;
+    min-height: 100%;
+  }
 }

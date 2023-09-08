@@ -6,23 +6,35 @@
   <p>Feel is an <a href="https://angular.io" target="_blank">Angular</a> component library.</p>
 </div>
 
-<feel-flex-grid [minWidth]="'14rem'">
-  <div class="card typography">
-    <h1>Style</h1>
-    <p>is the base required for all projects, it provides all necessary css variables and automatic dark mode.</p>
+<feel-flex-grid [minWidth]="'28rem'">
+  <div class="card">
+    <app-icon-style class="icon"/>
+    <div class="typography">
+      <h1>Style</h1>
+      <p>is the base required for all projects, it provides all necessary css variables and automatic dark mode.</p>
+    </div>
   </div>
-  <div class="card typography">
-    <h1>Notification</h1>
-    <p>is a toast like notification system.</p>
-    <feel-button label="Example" (click)="notificationExample()"/>
+  <div class="card">
+    <app-icon-notification class="icon"/>
+    <div class="typography">
+      <h1>Notification</h1>
+      <p>is a simple toast like notification system.</p>
+      <feel-button label="Example" (click)="notificationExample()"/>
+    </div>
   </div>
-  <div class="card typography">
-    <h1>Form</h1>
-    <p>provides form components, e.g. a Button, a Textfield and a Checkbox</p>
+  <div class="card">
+    <app-icon-keyboard class="icon"/>
+    <div class="typography">
+      <h1>Form</h1>
+      <p>provides form components, e.g. a Button, a Textfield and a Checkbox</p>
+    </div>
   </div>
-  <div class="card typography">
-    <h1>Layout</h1>
-    <p>contains utilities for placing groups of element. Have a look at this grid while changing the window width.</p>
+  <div class="card">
+    <app-icon-dashboard class="icon"/>
+    <div class="typography">
+      <h1>Layout</h1>
+      <p>contains utilities for placing groups of element. Have a look at this grid while changing the window width.</p>
+    </div>
   </div>
 </feel-flex-grid>
 

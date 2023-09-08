@@ -6,6 +6,10 @@ import {ButtonComponent} from "@feel/form";
 import {NotificationListComponent} from "@feel/notification";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FlexGridComponent} from "@feel/layout";
+import {IconStyleComponent} from "./icons/icon-style/icon-style.component";
+import {IconNotificationComponent} from "./icons/icon-notification/icon-notification.component";
+import {IconKeyboardComponent} from "./icons/icon-keyboard/icon-keyboard.component";
+import {IconDashboardComponent} from "./icons/icon-dashboard/icon-dashboard.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import {FlexGridComponent} from "@feel/layout";
     BrowserAnimationsModule,
     ButtonComponent,
     NotificationListComponent,
-    FlexGridComponent
+    FlexGridComponent,
+    IconStyleComponent,
+    IconNotificationComponent,
+    IconKeyboardComponent,
+    IconDashboardComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
