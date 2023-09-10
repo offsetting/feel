@@ -22,15 +22,15 @@
 
 .card {
   background-color: $c-card;
-  border: 0.1rem solid $c-card-secondary;
+  border: calc(0.1 * $s-unit) solid $c-card-secondary;
   padding: $s-padding;
   border-radius: calc(0.4 * $s-unit);
 
   display: flex;
-  gap: 1rem;
+  gap: calc(1 * $s-unit);
 
   .icon {
-    min-width: 5rem;
+    min-width: calc(5 * $s-unit);
     min-height: 100%;
   }
 }

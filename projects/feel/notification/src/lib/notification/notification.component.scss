@@ -11,15 +11,16 @@ $flavors: (
   align-items: center;
   position: relative;
   background-color: $c-primary;
-  border-radius: 0.3rem;
-  width: 20rem;
+  border-radius: calc(0.4 * $s-unit);
+  width: calc(20 * $s-unit);
   overflow: hidden;
-  padding: 0.6rem 0.8rem;
-  column-gap: 0.6rem;
+  padding: calc(0.6 * $s-unit) calc(0.8 * $s-unit);
+  column-gap: calc(0.6 * $s-unit);
 
   svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    $size: calc(1.5 * $s-unit);
+    width: $size;
+    height: $size;
     fill: $c-secondary;
   }
 
@@ -34,7 +35,7 @@ $flavors: (
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 0.3rem;
+    height: calc(0.3 * $s-unit);
     background-color: $c-primary-d;
     transition: width 500ms linear;
     width: 100%;
