@@ -3,6 +3,10 @@
   $c-primary-l: #ef7743,
   $c-primary-d: #9d3a0a,
 
+  $c-accent: #b04cfc,
+  $c-accent-l: #b073de,
+  $c-accent-d: #9100ff,
+
   $c-secondary: #000,
   $c-secondary-l: #181818,
   $c-secondary-ll: #212121,
@@ -57,6 +61,10 @@
     --c-primary: #{$c-primary};
     --c-primary-l: #{$c-primary-l};
     --c-primary-d: #{$c-primary-d};
+
+    --c-accent: #{$c-accent};
+    --c-accent-l: #{$c-accent-l};
+    --c-accent-d: #{$c-accent-d};
 
     --c-secondary: #{$c-secondary};
     --c-secondary-l: #{$c-secondary-l};

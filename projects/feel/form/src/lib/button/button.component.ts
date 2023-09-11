@@ -2,7 +2,7 @@ import {Component, HostBinding, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterLink} from "@angular/router";
 
-export type ButtonFlavor = "good" | "danger";
+export type ButtonFlavor = "good" | "danger" | "accent";
 
 @Component({
   selector: 'feel-button',
@@ -27,5 +27,10 @@ export class ButtonComponent {
   @HostBinding("class.danger")
   private get danger(): boolean {
     return this.flavor === "danger";
+  }
+
+  @HostBinding("class.accent")
+  private get accent(): boolean {
+    return this.flavor === "accent";
   }
 }

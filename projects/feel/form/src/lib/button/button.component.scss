@@ -2,9 +2,10 @@
 @import "vars";
 
 $flavors: (
-  good: $c-good,
-  danger: $c-danger,
-  disabled: $c-gray,
+  good: ($c-good, $c-good-d),
+  danger: ($c-danger, $c-danger-d),
+  accent: ($c-accent, $c-accent-d),
+  disabled: ($c-gray, $c-accent),
 );
 
 :host {
@@ -53,10 +54,14 @@ $flavors: (
     &.#{$name} {
       button, a {
         color: $f-color-inverted;
-        background-color: $colors;
+        background-color: list.nth($colors, 1);
+
+        &:hover {
+          background-color: list.nth($colors, 2);
+        }
 
         &:active {
-          box-shadow: inset 0 0 calc(0.5 * $s-unit) calc(0.05 * $s-unit) $colors;
+          box-shadow: inset 0 0 calc(0.5 * $s-unit) calc(0.05 * $s-unit) list.nth($colors, 1);
         }
       }
 
