@@ -7,10 +7,26 @@ $spacing: calc(0.5 * $s-unit);
     }
   }
 
-  h1, h2, h3, h4, h5, h6, h7, p, img, ul, ol {
+  h1, h2, h3, h4, h5, h6, h7, p, img, ul, ol, table {
     &:not(:last-child) {
-      margin-bottom: $spacing
+      margin-bottom: $spacing;
     }
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.17em;
+  }
+
+  h4 {
+    font-size: 1.00em;
   }
 
   ul {
@@ -55,4 +71,8 @@ $spacing: calc(0.5 * $s-unit);
     background-color: $c-primary;
     color: $c-secondary;
   }
+}
+
+.typography li:has(a), li:has(a.typography) {
+  margin-bottom: 0.2rem;
 }
