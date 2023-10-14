@@ -2,6 +2,7 @@
    [queryParams]="disabled ? undefined : query"
    [routerLink]="disabled ? undefined : link"
    [routerLinkActive]="highlightActiveLink ? 'active' : []"
+   [class.highlight-active-link]="highlightActiveLink"
    class="not">
   <ng-container *ngTemplateOutlet="tmpl"></ng-container>
   {{label}}

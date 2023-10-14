@@ -14,13 +14,16 @@ $flavors: (
     border: none;
     outline: none;
     cursor: pointer;
-    color: $c-secondary;
     user-select: none;
     border-radius: calc(0.4 * $s-unit);
     padding: calc(0.4 * $s-unit) calc(0.8 * $s-unit);
-    background-color: $c-primary;
     font-weight: $f-weight-bold;
     transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+
+    &:not(.highlight-active-link) {
+      color: $c-secondary;
+      background-color: $c-primary;
+    }
 
     &:hover {
       color: $c-secondary-d;
