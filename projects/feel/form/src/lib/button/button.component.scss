@@ -58,7 +58,7 @@ $flavors: (
   a {
     text-decoration: none;
 
-    .active {
+    &.active {
       color: $c-secondary-d;
       background-color: $c-primary;
     }
