@@ -20,6 +20,10 @@ $flavors: (
     font-weight: $f-weight-bold;
     transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 
+    &.highlight-active-link {
+      color: $f-color;
+    }
+
     &:not(.highlight-active-link) {
       color: $c-secondary;
       background-color: $c-primary;
