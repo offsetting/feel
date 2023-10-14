@@ -1,13 +1,13 @@
 import {Component, HostBinding, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 export type ButtonFlavor = "good" | "danger" | "accent";
 
 @Component({
   selector: 'feel-button',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
@@ -15,6 +15,7 @@ export class ButtonComponent {
 
   @Input() public label?: string;
   @Input() public link?: string;
+  @Input() public highlightActiveLink?: boolean;
   @Input() public query?: Record<string, string | undefined>;
   @Input() public flavor?: ButtonFlavor;
   @Input() @HostBinding("class.disabled") public disabled?: boolean | null;

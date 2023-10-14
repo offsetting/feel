@@ -30,9 +30,7 @@ $flavors: (
     &:active {
       box-shadow: inset 0 0 calc(0.5 * $s-unit) calc(0.05 * $s-unit) $c-primary;
     }
-  }
 
-  button, a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +45,15 @@ $flavors: (
 
     &:hover ::ng-deep svg {
       fill: $c-secondary-d;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    .active {
+      color: $c-secondary-d;
+      background-color: $c-primary;
     }
   }
 
