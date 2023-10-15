@@ -3,12 +3,13 @@
    [routerLink]="disabled ? undefined : link"
    [routerLinkActive]="highlightActiveLink ? 'active' : []"
    [class.highlight-active-link]="highlightActiveLink"
+   [class.center]="center !== false"
    class="not">
   <ng-container *ngTemplateOutlet="tmpl"></ng-container>
   {{label}}
 </a>
 <ng-template #withoutLink>
-  <button>
+  <button [class.center]="center !== false">
     <ng-container *ngTemplateOutlet="tmpl"></ng-container>
     {{label}}
   </button>

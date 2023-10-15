@@ -20,8 +20,19 @@ $flavors: (
     font-weight: $f-weight-bold;
     transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 
+    ::ng-deep svg {
+      fill: $c-secondary;
+      width: 1.3em;
+      height: 1.3em;
+      transition: fill 150ms ease-in-out;
+    }
+
     &.highlight-active-link {
       color: $f-color;
+
+      ::ng-deep svg {
+        fill: $c-secondary;
+      }
     }
 
     &:not(.highlight-active-link) {
@@ -39,15 +50,11 @@ $flavors: (
     }
 
     display: flex;
-    justify-content: center;
     align-items: center;
     column-gap: calc(0.5 * $s-unit);
 
-    ::ng-deep svg {
-      fill: $c-secondary;
-      width: 1.3em;
-      height: 1.3em;
-      transition: fill 150ms ease-in-out;
+    &.center {
+      justify-content: center;
     }
 
     &:hover ::ng-deep svg {
