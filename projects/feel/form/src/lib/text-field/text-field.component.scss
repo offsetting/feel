@@ -11,6 +11,7 @@
       border: calc(0.1 * $s-unit) solid $c-page;
       padding: calc(0.4 * $s-unit);
       border-radius: calc(0.4 * $s-unit);
+      width: 100%;
 
       transition: 150ms ease-in-out background-color, 150ms ease-in-out border-color;
     }
