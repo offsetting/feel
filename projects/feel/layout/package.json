@@ -8,7 +8,7 @@
     "@feel/style": "0.0.0-git"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.6.0"
   },
   "sideEffects": false
 }
