@@ -20,7 +20,7 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   private cachedValue: string | undefined;
   private cachedDisabledState: boolean | undefined;
 
-  @ViewChild('input') private input: ElementRef<HTMLInputElement> | undefined;
+  @ViewChild('input') private input: ElementRef<HTMLSelectElement> | undefined;
 
   constructor(
     private readonly renderer2: Renderer2,
