@@ -10,6 +10,7 @@ import {IconStyleComponent} from "./icons/icon-style/icon-style.component";
 import {IconNotificationComponent} from "./icons/icon-notification/icon-notification.component";
 import {IconKeyboardComponent} from "./icons/icon-keyboard/icon-keyboard.component";
 import {IconDashboardComponent} from "./icons/icon-dashboard/icon-dashboard.component";
+import {FormDropdownComponent} from "../../../feel/form/src/lib/form-dropdown/form-dropdown.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {IconDashboardComponent} from "./icons/icon-dashboard/icon-dashboard.comp
     IconStyleComponent,
     IconNotificationComponent,
     IconKeyboardComponent,
-    IconDashboardComponent
+    IconDashboardComponent,
+    FormDropdownComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
