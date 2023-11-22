@@ -1,0 +1,9 @@
+<label>
+  <span>{{label}}</span>
+
+  <select #input (blur)="onBlur()" (input)="onInput()">
+    <ng-content></ng-content>
+  </select>
+
+  <ng-content select="feel-form-error"/>
+</label>

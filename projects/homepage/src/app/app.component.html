@@ -20,6 +20,16 @@
       <h1>Notification</h1>
       <p>is a simple toast like notification system.</p>
       <feel-button (click)="notificationExample()" label="Example"/>
+
+      <feel-dropdown label="DropDown Menus">
+        <option disabled selected value=""> -- select a framework --</option>
+        <option>Angular</option>
+        <option>React</option>
+        <option>GMX</option>
+      </feel-dropdown>
+
+      <feel-text-field label="Textfeld"/>
+
     </div>
   </div>
   <div class="card">
@@ -55,11 +65,3 @@
 <router-outlet/>
 
 <feel-notification-list></feel-notification-list>
-
-
-<feel-form-dropdown label="DropDown Menus">
-  <option disabled selected value> -- select a framework -- </option>
-  <option>Angular</option>
-  <option>React</option>
-  <option>GMX</option>
-</feel-form-dropdown>

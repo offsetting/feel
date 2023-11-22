@@ -22,7 +22,7 @@
 
 .card {
   background-color: $c-card;
-  border: calc(0.1 * $s-unit) solid $c-card-secondary;
+  border: calc(0.15 * $s-unit) solid $c-card-secondary;
   padding: $s-padding;
   border-radius: calc(0.4 * $s-unit);
 
