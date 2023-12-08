@@ -3,7 +3,9 @@ import {
   Component,
   ContentChildren,
   ElementRef,
+  EventEmitter,
   Input,
+  Output,
   QueryList,
   Renderer2,
   ViewChild
@@ -25,6 +27,8 @@ import {OptionComponent} from "../option/option.component";
 export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
 
   @Input() public label: string | undefined;
+  @Output() public input = new EventEmitter<string>();
+
   private value: string | undefined;
 
   protected onChangeFn: ((checked: string | undefined) => void) | undefined;
@@ -32,7 +36,7 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   private cachedValue: string | undefined;
   private cachedDisabledState: boolean | undefined;
 
-  @ViewChild('input') private input: ElementRef<HTMLSelectElement> | undefined;
+  @ViewChild('input') private inputEle: ElementRef<HTMLSelectElement> | undefined;
   @ContentChildren(OptionComponent) private options: QueryList<OptionComponent> | undefined;
 
   constructor(
@@ -41,9 +45,9 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   }
 
   public ngAfterViewInit(): void {
-    if (this.input) {
+    if (this.inputEle) {
       if (this.cachedValue !== undefined && this.cachedDisabledState !== null) this.setValue(this.cachedValue);
-      if (this.cachedDisabledState) this.renderer2.setProperty(this.input.nativeElement, "disabled", this.cachedDisabledState);
+      if (this.cachedDisabledState) this.renderer2.setProperty(this.inputEle.nativeElement, "disabled", this.cachedDisabledState);
     }
   }
 
@@ -56,13 +60,13 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   }
 
   public writeValue(value: string | undefined): void {
-    if (!this.input) this.cachedValue = value;
+    if (!this.inputEle) this.cachedValue = value;
     else this.setValue(value);
   }
 
   public setDisabledState(disabled: boolean) {
-    if (!this.input) this.cachedDisabledState = disabled;
-    else this.renderer2.setProperty(this.input.nativeElement, "disabled", disabled);
+    if (!this.inputEle) this.cachedDisabledState = disabled;
+    else this.renderer2.setProperty(this.inputEle.nativeElement, "disabled", disabled);
   }
 
   protected onBlur(): void {
@@ -70,14 +74,16 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   }
 
   protected onInput(): void {
-    this.value = this.getValueByLabel(this.label);
+    const rawValue = this.inputEle?.nativeElement.value;
+    this.value = this.getValueByLabel(rawValue);
     this.onChangeFn?.(this.value);
     this.onTouchedFn?.();
+    this.input.emit(rawValue);
   }
 
   private setValue(value: string | undefined): void {
     this.value = value;
-    this.renderer2.setProperty(this.input?.nativeElement, "value", this.getLabel(value));
+    this.renderer2.setProperty(this.inputEle?.nativeElement, "value", this.getLabel(value));
   }
 
   private getLabel(value: string | undefined): string | undefined {
