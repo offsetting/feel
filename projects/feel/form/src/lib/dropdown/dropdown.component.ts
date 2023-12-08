@@ -27,7 +27,7 @@ import {OptionComponent} from "../option/option.component";
 export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
 
   @Input() public label: string | undefined;
-  @Output() public input = new EventEmitter<string>();
+  @Output() public rawInput = new EventEmitter<string|undefined>();
 
   private value: string | undefined;
 
@@ -78,7 +78,7 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
     this.value = this.getValueByLabel(rawValue);
     this.onChangeFn?.(this.value);
     this.onTouchedFn?.();
-    this.input.emit(rawValue);
+    this.rawInput.emit(rawValue);
   }
 
   private setValue(value: string | undefined): void {
