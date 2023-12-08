@@ -4,20 +4,41 @@
   label {
     display: flex;
     flex-direction: column;
+    position: relative;
 
-    select {
+    input, .options {
+      border: calc(0.15 * $s-unit) solid $c-page;
+    }
+
+    input {
       outline: none;
       background-color: $c-page;
-      border: calc(0.15 * $s-unit) solid $c-page;
       padding: calc(0.4 * $s-unit);
-      border-radius: calc(0.4 * $s-unit);
       width: 100%;
+      border-bottom: 0;
+
+      border-radius: calc(0.4 * $s-unit);
 
       transition: 150ms ease-in-out background-color, 150ms ease-in-out border-color;
     }
 
+    .options {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      opacity: 0;
+      background-color: $c-page;
+      border-top: 0;
 
-    &:hover select {
+      border-bottom-left-radius: calc(0.4 * $s-unit);
+      border-bottom-right-radius: calc(0.4 * $s-unit);
+
+      transition: 150ms ease-in-out opacity, 150ms ease-in-out border-color;
+    }
+
+    &:hover input {
       background-color: $c-card-secondary;
       border-color: $c-card-secondary;
     }
@@ -25,13 +46,25 @@
 
   &.ng-touched.ng-dirty {
     &.ng-invalid, &.own-dirty {
-      label select {
+      label input {
         border-color: $c-danger-d;
       }
     }
   }
 
-  &:focus-within label select {
-    border-color: $c-primary;
+  &:focus-within label {
+    input, .options {
+      border-color: $c-primary;
+    }
+
+    input {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .options {
+      opacity: 1;
+      display: flex;
+    }
   }
 }

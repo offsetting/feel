@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NotificationService} from "@feel/notification";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import {NotificationService} from "@feel/notification";
 })
 export class AppComponent {
 
+  protected form = new FormGroup({
+    drop: new FormControl
+  })
   constructor(
     private readonly notificationService: NotificationService
   ) {

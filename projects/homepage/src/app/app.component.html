@@ -21,15 +21,15 @@
       <p>is a simple toast like notification system.</p>
       <feel-button (click)="notificationExample()" label="Example"/>
 
-      <feel-dropdown label="DropDown Menus">
-        <option disabled selected value=""> -- select a framework --</option>
-        <option>Angular</option>
-        <option>React</option>
-        <option>GMX</option>
-      </feel-dropdown>
+      <form [formGroup]="form">
+        <feel-dropdown formControlName="drow" label="DropDown Menus">
+          <feel-option value="angular" label="Angular"/>
+          <feel-option value="react" label="React"/>
+          <feel-option value="gmx" label="GMX"/>
+        </feel-dropdown>
 
-      <feel-text-field label="Textfeld"/>
-
+        <feel-text-field formControlName="" label="Textfeld"/>
+      </form>
     </div>
   </div>
   <div class="card">

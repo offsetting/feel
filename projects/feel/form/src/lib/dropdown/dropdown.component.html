@@ -1,9 +1,11 @@
 <label>
   <span>{{label}}</span>
 
-  <select #input (blur)="onBlur()" (input)="onInput()">
-    <ng-content></ng-content>
-  </select>
+  <input #input (blur)="onBlur()" (input)="onInput()" type="text">
 
   <ng-content select="feel-form-error"/>
+
+  <div class="options">
+    <ng-content select="feel-option"/>
+  </div>
 </label>

@@ -1,0 +1,13 @@
+@import "vars";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: calc(0.4 * $s-unit);
+  width: 100%;
+  transition: 150ms ease-in-out background-color;
+
+  &:hover {
+    background-color: $c-card-secondary;
+  }
+}
