@@ -99,7 +99,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          registry-url: https://git.offsetting.dev/api/packages/offsetting/npm/
+          registry-url: https://codeberg.org/api/packages/m4rc3l/npm/
           node-version-file: '.nvmrc'
           cache: 'pnpm'
 
