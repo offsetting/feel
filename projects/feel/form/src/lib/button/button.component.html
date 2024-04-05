@@ -1,6 +1,7 @@
 <a *ngIf="link; else withoutLink"
    [queryParams]="disabled ? undefined : query"
-   [routerLink]="disabled ? undefined : link"
+   [routerLink]="disabled ? undefined : routerLink"
+   [href]="disabled ? undefined : href"
    [routerLinkActive]="highlightActiveLink ? 'active' : []"
    [class.highlight-active-link]="highlightActiveLink"
    [class.center]="center !== false"
