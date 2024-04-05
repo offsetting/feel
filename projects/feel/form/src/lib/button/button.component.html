@@ -1,7 +1,15 @@
+<a *ngIf="isHref(link); else noHref"
+   [href]="disabled ? undefined : link"
+   [class.center]="center !== false"
+   class="not">
+  <ng-container *ngTemplateOutlet="tmpl"></ng-container>
+  {{label}}
+</a>
+
+<ng-template #noHref>
 <a *ngIf="link; else withoutLink"
    [queryParams]="disabled ? undefined : query"
-   [routerLink]="disabled ? undefined : routerLink(link)"
-   [href]="disabled ? undefined : href(link)"
+   [routerLink]="disabled ? undefined : link"
    [routerLinkActive]="highlightActiveLink ? 'active' : []"
    [class.highlight-active-link]="highlightActiveLink"
    [class.center]="center !== false"
@@ -9,6 +17,8 @@
   <ng-container *ngTemplateOutlet="tmpl"></ng-container>
   {{label}}
 </a>
+</ng-template>
+
 <ng-template #withoutLink>
   <button [class.center]="center !== false">
     <ng-container *ngTemplateOutlet="tmpl"></ng-container>

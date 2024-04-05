@@ -21,12 +21,8 @@ export class ButtonComponent {
   @Input() public flavor?: ButtonFlavor;
   @Input() @HostBinding("class.disabled") public disabled?: boolean | null;
 
-  protected routerLink(link: string|undefined): string | undefined {
-    return link && (link.startsWith('https:') || link.startsWith('mailto:')) ? undefined : link;
-  }
-
-  protected href(link: string): string | undefined {
-    return link && (link.startsWith('https:') || link.startsWith('mailto:')) ? link : undefined;
+  protected isHref(link: string | undefined): boolean {
+    return (!!link && (link.startsWith('https:') || link.startsWith('mailto:')));
   }
 
   @HostBinding("class.good")
