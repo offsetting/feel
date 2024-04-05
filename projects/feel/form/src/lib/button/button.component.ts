@@ -21,12 +21,12 @@ export class ButtonComponent {
   @Input() public flavor?: ButtonFlavor;
   @Input() @HostBinding("class.disabled") public disabled?: boolean | null;
 
-  get routerLink(): string | undefined {
-    return this.link && (this.link.startsWith('https:') || this.link.startsWith('mailto:')) ? undefined : this.link;
+  protected routerLink(link: string|undefined): string | undefined {
+    return link && (link.startsWith('https:') || link.startsWith('mailto:')) ? undefined : link;
   }
 
-  get href(): string | undefined {
-    return this.link && (this.link.startsWith('https:') || this.link.startsWith('mailto:')) ? this.link : undefined;
+  protected href(link: string): string | undefined {
+    return link && (link.startsWith('https:') || link.startsWith('mailto:')) ? link : undefined;
   }
 
   @HostBinding("class.good")
