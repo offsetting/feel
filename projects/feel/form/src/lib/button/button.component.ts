@@ -22,11 +22,11 @@ export class ButtonComponent {
   @Input() @HostBinding("class.disabled") public disabled?: boolean | null;
 
   get routerLink(): string | undefined {
-    return this.link && this.link.startsWith('https:') && this.link.startsWith('mailto:') ? undefined : this.link;
+    return this.link && (this.link.startsWith('https:') || this.link.startsWith('mailto:')) ? undefined : this.link;
   }
 
   get href(): string | undefined {
-    return this.link && this.link.startsWith('https:') && this.link.startsWith('mailto:') ? this.link : undefined;
+    return this.link && (this.link.startsWith('https:') || this.link.startsWith('mailto:')) ? this.link : undefined;
   }
 
   @HostBinding("class.good")
