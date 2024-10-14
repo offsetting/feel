@@ -20,7 +20,7 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   private cachedValue: string | null | undefined;
   private cachedDisabledState: boolean | undefined;
 
-  @ViewChild('select') private input: ElementRef<HTMLSelectElement> | undefined;
+  @ViewChild('select') private select: ElementRef<HTMLSelectElement> | undefined;
 
   constructor(
     private readonly renderer2: Renderer2,
@@ -28,9 +28,9 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   }
 
   public ngAfterViewInit(): void {
-    if (this.input) {
+    if (this.select) {
       if (this.cachedValue !== undefined && this.cachedDisabledState !== null) this.setValue(this.cachedValue);
-      if (this.cachedDisabledState) this.renderer2.setProperty(this.input.nativeElement, "disabled", this.cachedDisabledState);
+      if (this.cachedDisabledState) this.renderer2.setProperty(this.select.nativeElement, "disabled", this.cachedDisabledState);
     }
   }
 
@@ -43,13 +43,13 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   }
 
   public writeValue(value: string | null | undefined): void {
-    if (!this.input) this.cachedValue = value;
+    if (!this.select) this.cachedValue = value;
     else this.setValue(value);
   }
 
   public setDisabledState(disabled: boolean) {
-    if (!this.input) this.cachedDisabledState = disabled;
-    else this.renderer2.setProperty(this.input.nativeElement, "disabled", disabled);
+    if (!this.select) this.cachedDisabledState = disabled;
+    else this.renderer2.setProperty(this.select.nativeElement, "disabled", disabled);
   }
 
   protected onBlur(): void {
@@ -62,10 +62,10 @@ export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
   }
 
   private getValue(): string | null | undefined {
-    return this.input?.nativeElement?.value;
+    return this.select?.nativeElement?.value;
   }
 
   private setValue(value: string | null | undefined) {
-    this.renderer2.setProperty(this.input?.nativeElement, "value", value);
+    this.renderer2.setProperty(this.select?.nativeElement, "value", value);
   }
 }

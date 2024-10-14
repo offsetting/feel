@@ -1,7 +1,7 @@
 <label>
   <span>{{label}}</span>
 
-  <select #input (blur)="onBlur()" (input)="onInput()">
+  <select #select (blur)="onBlur()" (change)="onInput()">
     <ng-content select="option" />
   </select>
 
