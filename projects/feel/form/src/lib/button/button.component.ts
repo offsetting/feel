@@ -1,6 +1,6 @@
-import {Component, HostBinding, Input} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import { Component, HostBinding, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 export type ButtonFlavor = "good" | "danger" | "accent";
 
@@ -18,11 +18,12 @@ export class ButtonComponent {
   @Input() public highlightActiveLink?: boolean;
   @Input() public center?: boolean;
   @Input() public query?: Record<string, string | undefined>;
+  @Input() public fragment?: string;
   @Input() public flavor?: ButtonFlavor;
   @Input() @HostBinding("class.disabled") public disabled?: boolean | null;
 
   protected isHref(link: string | undefined): boolean {
-    return (!!link && (link.startsWith('https:') || link.startsWith('mailto:') || link.startsWith('#')));
+    return (!!link && (link.startsWith('https:') || link.startsWith('mailto:')));
   }
 
   @HostBinding("class.good")

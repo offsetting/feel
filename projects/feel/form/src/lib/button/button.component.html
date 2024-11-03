@@ -10,6 +10,7 @@
 <a *ngIf="link; else withoutLink"
    [queryParams]="disabled ? undefined : query"
    [routerLink]="disabled ? undefined : link"
+   [fragment]="disabled ? undefined : fragment"
    [routerLinkActive]="highlightActiveLink ? 'active' : []"
    [class.highlight-active-link]="highlightActiveLink"
    [class.center]="center !== false"
