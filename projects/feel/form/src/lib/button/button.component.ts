@@ -22,7 +22,7 @@ export class ButtonComponent {
   @Input() @HostBinding("class.disabled") public disabled?: boolean | null;
 
   protected isHref(link: string | undefined): boolean {
-    return (!!link && (link.startsWith('https:') || link.startsWith('mailto:')));
+    return (!!link && (link.startsWith('https:') || link.startsWith('mailto:') || link.startsWith('#')));
   }
 
   @HostBinding("class.good")
