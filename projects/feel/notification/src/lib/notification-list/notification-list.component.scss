@@ -1,10 +1,10 @@
-@import "vars";
+@use "../../../../style/global/_vars.scss";
 
 :host {
   position: fixed;
-  right: $s-unit;
-  bottom: $s-unit;
+  right: vars.$s-unit;
+  bottom: vars.$s-unit;
   display: flex;
   flex-direction: column;
-  row-gap: $s-unit;
+  row-gap: vars.$s-unit;
 }

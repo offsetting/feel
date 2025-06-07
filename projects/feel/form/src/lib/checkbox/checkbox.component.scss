@@ -1,29 +1,29 @@
-@import "vars";
+@use "../../../../style/global/_vars.scss";
 
 label {
   display: flex;
   align-items: center;
-  gap: calc(0.5 * $s-unit);
-  margin: calc(0.2 * $s-unit) 0;
+  gap: calc(0.5 * vars.$s-unit);
+  margin: calc(0.2 * vars.$s-unit) 0;
 
   input {
     appearance: none;
-    background-color: $c-page;
+    background-color: vars.$c-page;
     display: grid;
     place-content: center;
-    width: calc(1.5 * $s-unit);
-    height: calc(1.5 * $s-unit);
-    border-radius: calc(0.4 * $s-unit);
+    width: calc(1.5 * vars.$s-unit);
+    height: calc(1.5 * vars.$s-unit);
+    border-radius: calc(0.4 * vars.$s-unit);
     transition: 150ms ease-in-out background-color;
 
     &::before {
       content: "";
-      width: calc(0.8 * $s-unit);
-      height: calc(0.8 * $s-unit);
-      border-radius: calc(0.4 * $s-unit);
+      width: calc(0.8 * vars.$s-unit);
+      height: calc(0.8 * vars.$s-unit);
+      border-radius: calc(0.4 * vars.$s-unit);
       transform: scale(0);
       transition: 100ms ease-in-out transform;
-      box-shadow: inset 1em 1em $c-primary;
+      box-shadow: inset 1em 1em vars.$c-primary;
     }
 
     &:checked::before {
@@ -32,6 +32,6 @@ label {
   }
 
   &:hover input {
-    background-color: $c-card-secondary;
+    background-color: vars.$c-card-secondary;
   }
 }

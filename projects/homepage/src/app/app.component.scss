@@ -1,11 +1,11 @@
-@import "vars";
+@use "../../../feel/style/global/_vars.scss";
 
 :host {
   display: flex;
   flex-direction: column;
-  gap: $s-unit;
-  padding: $s-padding;
-  max-width: $s-content;
+  gap: vars.$s-unit;
+  padding: vars.$s-padding;
+  max-width: vars.$s-content;
   margin: 0 auto;
 }
 
@@ -13,24 +13,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: calc(3 * $s-unit) 0;
+  padding: calc(3 * vars.$s-unit) 0;
 
   h1 {
-    font-size: calc(6 * $s-unit);
+    font-size: calc(6 * vars.$s-unit);
   }
 }
 
 .card {
-  background-color: $c-card;
-  border: calc(0.15 * $s-unit) solid $c-card-secondary;
-  padding: $s-padding;
-  border-radius: calc(0.4 * $s-unit);
+  background-color: vars.$c-card;
+  border: calc(0.15 * vars.$s-unit) solid vars.$c-card-secondary;
+  padding: vars.$s-padding;
+  border-radius: calc(0.4 * vars.$s-unit);
 
   display: flex;
-  gap: calc(1 * $s-unit);
+  gap: calc(1 * vars.$s-unit);
 
   .icon {
-    min-width: calc(5 * $s-unit);
+    min-width: calc(5 * vars.$s-unit);
     min-height: 100%;
   }
 }

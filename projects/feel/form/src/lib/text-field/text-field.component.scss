@@ -1,4 +1,4 @@
-@import "vars";
+@use "../../../../style/global/_vars.scss";
 
 :host {
   label {
@@ -7,10 +7,10 @@
 
     input, textarea {
       outline: none;
-      background-color: $c-page;
-      border: calc(0.15 * $s-unit) solid $c-page;
-      padding: calc(0.4 * $s-unit);
-      border-radius: calc(0.4 * $s-unit);
+      background-color: vars.$c-page;
+      border: calc(0.15 * vars.$s-unit) solid vars.$c-page;
+      padding: calc(0.4 * vars.$s-unit);
+      border-radius: calc(0.4 * vars.$s-unit);
       width: 100%;
 
       transition: 150ms ease-in-out background-color, 150ms ease-in-out border-color;
@@ -22,8 +22,8 @@
 
     &:hover {
       input, textarea {
-        background-color: $c-card-secondary;
-        border-color: $c-card-secondary;
+        background-color: vars.$c-card-secondary;
+        border-color: vars.$c-card-secondary;
       }
     }
   }
@@ -32,7 +32,7 @@
     &.ng-invalid, &.own-dirty {
       label {
         input, textarea {
-          border-color: $c-danger-d;
+          border-color: vars.$c-danger-d;
         }
       }
     }
@@ -40,7 +40,7 @@
 
   &:focus-within label {
     input, textarea {
-      border-color: $c-primary;
+      border-color: vars.$c-primary;
     }
   }
 }

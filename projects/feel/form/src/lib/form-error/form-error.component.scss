@@ -1,6 +1,6 @@
-@import "vars";
+@use "../../../../style/global/_vars.scss";
 
 :host {
-  font-size: $f-size-small;
-  color: $c-danger;
+  font-size: vars.$f-size-small;
+  color: vars.$c-danger;
 }
