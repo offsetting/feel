@@ -1,3 +1,5 @@
-<feel-notification *ngFor="let notification of notifications | async; trackBy trackBy"
-                   @fade
-                   [notification]="notification"/>
+@for (notification of notifications | async; track notification) {
+  <feel-notification
+    @fade
+    [notification]="notification"/>
+}

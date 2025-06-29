@@ -6,12 +6,11 @@ import {fadeAnimation} from '@feel/style';
 import {NotificationComponent} from "../notification/notification.component";
 
 @Component({
-  selector: 'feel-notification-list',
-  standalone: true,
-  imports: [CommonModule, NotificationComponent],
-  templateUrl: './notification-list.component.html',
-  styleUrls: ['./notification-list.component.scss'],
-  animations: [fadeAnimation]
+    selector: 'feel-notification-list',
+    imports: [CommonModule, NotificationComponent],
+    templateUrl: './notification-list.component.html',
+    styleUrls: ['./notification-list.component.scss'],
+    animations: [fadeAnimation]
 })
 export class NotificationListComponent {
 
