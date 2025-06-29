@@ -1,4 +1,5 @@
-@import "./global/vars";
+@use "sass:meta";
+@use "global/vars";
 
 * {
   box-sizing: border-box;
@@ -7,14 +8,14 @@
 }
 
 body {
-  background: $c-page;
+  background: vars.$c-page;
   min-height: 100vh;
 }
 
 ::selection {
-  background-color: $c-primary;
-  color: $c-secondary;
+  background-color: vars.$c-primary;
+  color: vars.$c-secondary;
 }
 
-@import "./styles/font";
-@import "./styles/typography";
+@include meta.load-css("styles/font");
+@include meta.load-css("styles/typography");

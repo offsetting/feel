@@ -1,21 +1,21 @@
-@import "../global/vars";
+@use "../global/vars";
 
 body, input, textarea, button {
-  font-family: $f-family;
-  font-weight: $f-weight;
-  color: $f-color;
+  font-family: vars.$f-family;
+  font-weight: vars.$f-weight;
+  color: vars.$f-color;
 }
 
 h1, h2, h3, h4, h5, h6, b, strong {
-  font-weight: $f-weight-bold;
+  font-weight: vars.$f-weight-bold;
 }
 
 p, a, div, button, input, textarea, select, ul, ol {
-  font-size: $f-size;
+  font-size: vars.$f-size;
 }
 
 pre, code {
-  font-family: $f-family-mono;
-  font-size: $f-size-mono;
-  font-weight: $f-weight;
+  font-family: vars.$f-family-mono;
+  font-size: vars.$f-size-mono;
+  font-weight: vars.$f-weight;
 }

@@ -1,33 +1,33 @@
 @use "sass:list";
-@import "vars";
+@use "../../../../style/global/_vars.scss";
 
 $flavors: (
-  success: ($c-good, $c-good-d),
-  error: ($c-danger, $c-danger-d)
+  success: (vars.$c-good, vars.$c-good-d),
+  error: (vars.$c-danger, vars.$c-danger-d)
 );
 
 :host {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: $c-primary;
-  border-radius: calc(0.4 * $s-unit);
-  width: calc(20 * $s-unit);
+  background-color: vars.$c-primary;
+  border-radius: calc(0.4 * vars.$s-unit);
+  width: calc(20 * vars.$s-unit);
   overflow: hidden;
-  padding: calc(0.6 * $s-unit) calc(0.8 * $s-unit);
-  column-gap: calc(0.6 * $s-unit);
+  padding: calc(0.6 * vars.$s-unit) calc(0.8 * vars.$s-unit);
+  column-gap: calc(0.6 * vars.$s-unit);
 
   svg {
-    $size: calc(1.5 * $s-unit);
+    $size: calc(1.5 * vars.$s-unit);
     width: $size;
     height: $size;
-    fill: $c-secondary;
+    fill: vars.$c-secondary;
   }
 
   p {
     margin: 0;
     flex: 1;
-    color: $c-secondary;
+    color: vars.$c-secondary;
     line-height: 1.2;
   }
 
@@ -35,8 +35,8 @@ $flavors: (
     position: absolute;
     bottom: 0;
     left: 0;
-    height: calc(0.3 * $s-unit);
-    background-color: $c-primary-d;
+    height: calc(0.3 * vars.$s-unit);
+    background-color: vars.$c-primary-d;
     transition: width 500ms linear;
     width: 100%;
   }
@@ -46,11 +46,11 @@ $flavors: (
       background-color: list.nth($colors, 1);
 
       svg {
-        fill: $f-color-inverted;
+        fill: vars.$f-color-inverted;
       }
 
       p {
-        color: $f-color-inverted;
+        color: vars.$f-color-inverted;
       }
 
       .duration {

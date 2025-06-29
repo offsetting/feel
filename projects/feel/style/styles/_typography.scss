@@ -1,4 +1,6 @@
-$spacing: calc(0.5 * $s-unit);
+@use "../global/vars";
+
+$spacing: calc(0.5 * vars.$s-unit);
 
 .typography {
   h1, h2, h3, h4, h5, h6, h7 {
@@ -30,11 +32,11 @@ $spacing: calc(0.5 * $s-unit);
   }
 
   ul {
-    margin-left: calc($s-unit);
+    margin-left: calc(vars.$s-unit);
   }
 
   ol {
-    margin-left: calc(2 * $s-unit);
+    margin-left: calc(2 * vars.$s-unit);
   }
 
   ul li::marker {
@@ -43,33 +45,33 @@ $spacing: calc(0.5 * $s-unit);
 
   ol, ul {
     li {
-      padding-left: calc(0.5 * $s-unit);
+      padding-left: calc(0.5 * vars.$s-unit);
 
       &::marker {
-        color: $c-primary;
-        font-weight: $f-weight-bold;
+        color: vars.$c-primary;
+        font-weight: vars.$f-weight-bold;
       }
     }
   }
 
   code {
     display: inline-block;
-    background-color: $c-page;
-    padding: calc(0.2 * $s-unit) calc(0.4 * $s-unit);
-    border-radius: calc(0.4 * $s-unit);
+    background-color: vars.$c-page;
+    padding: calc(0.2 * vars.$s-unit) calc(0.4 * vars.$s-unit);
+    border-radius: calc(0.4 * vars.$s-unit);
   }
 }
 
 .typography a, a.typography {
   &:not(:has(code)), code {
-    color: $f-color;
+    color: vars.$f-color;
     outline: none;
     text-decoration: none;
-    border-bottom: calc(.15 * $s-unit) solid $c-primary;
+    border-bottom: calc(.15 * vars.$s-unit) solid vars.$c-primary;
 
     &:hover {
-      background-color: $c-primary;
-      color: $c-secondary;
+      background-color: vars.$c-primary;
+      color: vars.$c-secondary;
     }
   }
 
