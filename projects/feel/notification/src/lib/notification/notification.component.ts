@@ -3,11 +3,10 @@ import {CommonModule} from '@angular/common';
 import {Notification} from "../notification.domain";
 
 @Component({
-  selector: 'feel-notification',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './notification.component.html',
-  styleUrls: ['./notification.component.scss']
+    selector: 'feel-notification',
+    imports: [CommonModule],
+    templateUrl: './notification.component.html',
+    styleUrls: ['./notification.component.scss']
 })
 export class NotificationComponent {
 

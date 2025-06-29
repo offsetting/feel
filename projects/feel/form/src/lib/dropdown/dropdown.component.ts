@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 
 @Component({
-  selector: 'feel-dropdown',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.scss'],
-  // see https://github.com/angular/angular/blob/master/packages/forms/src/directives/default_value_accessor.ts
-  providers: [{ provide: NG_VALUE_ACCESSOR, multi: true, useExisting: DropdownComponent }],
+    selector: 'feel-dropdown',
+    imports: [CommonModule],
+    templateUrl: './dropdown.component.html',
+    styleUrls: ['./dropdown.component.scss'],
+    // see https://github.com/angular/angular/blob/master/packages/forms/src/directives/default_value_accessor.ts
+    providers: [{ provide: NG_VALUE_ACCESSOR, multi: true, useExisting: DropdownComponent }]
 })
 export class DropdownComponent implements ControlValueAccessor, AfterViewInit {
 

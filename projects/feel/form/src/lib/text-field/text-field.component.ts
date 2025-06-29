@@ -6,13 +6,12 @@ import {TextFieldModule} from "@angular/cdk/text-field";
 export type FieldType = "text" | "multiline" | "number" | "date" | "password" | "datetime-local";
 
 @Component({
-  selector: 'feel-text-field',
-  standalone: true,
-  imports: [CommonModule, TextFieldModule],
-  templateUrl: './text-field.component.html',
-  styleUrls: ['./text-field.component.scss'],
-  // see https://github.com/angular/angular/blob/master/packages/forms/src/directives/default_value_accessor.ts
-  providers: [{provide: NG_VALUE_ACCESSOR, multi: true, useExisting: TextFieldComponent}],
+    selector: 'feel-text-field',
+    imports: [CommonModule, TextFieldModule],
+    templateUrl: './text-field.component.html',
+    styleUrls: ['./text-field.component.scss'],
+    // see https://github.com/angular/angular/blob/master/packages/forms/src/directives/default_value_accessor.ts
+    providers: [{ provide: NG_VALUE_ACCESSOR, multi: true, useExisting: TextFieldComponent }]
 })
 export class TextFieldComponent implements ControlValueAccessor, AfterViewInit {
 

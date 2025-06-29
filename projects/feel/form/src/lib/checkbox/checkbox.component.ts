@@ -3,12 +3,11 @@ import {CommonModule} from '@angular/common';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
-  selector: 'feel-checkbox',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss'],
-  providers: [{provide: NG_VALUE_ACCESSOR, multi: true, useExisting: CheckboxComponent}],
+    selector: 'feel-checkbox',
+    imports: [CommonModule],
+    templateUrl: './checkbox.component.html',
+    styleUrls: ['./checkbox.component.scss'],
+    providers: [{ provide: NG_VALUE_ACCESSOR, multi: true, useExisting: CheckboxComponent }]
 })
 export class CheckboxComponent implements ControlValueAccessor, AfterViewInit {
 

@@ -5,11 +5,10 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
 export type ButtonFlavor = "good" | "danger" | "accent";
 
 @Component({
-  selector: 'feel-button',
-  standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+    selector: 'feel-button',
+    imports: [CommonModule, RouterLink, RouterLinkActive],
+    templateUrl: './button.component.html',
+    styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
 
