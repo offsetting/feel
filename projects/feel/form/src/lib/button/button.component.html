@@ -1,31 +1,33 @@
-<a *ngIf="isHref(link); else noHref"
-   [href]="disabled ? undefined : link"
-   [class.center]="center !== false"
-   class="not">
-  <ng-container *ngTemplateOutlet="tmpl"></ng-container>
-  {{label}}
-</a>
-
-<ng-template #noHref>
-<a *ngIf="link; else withoutLink"
-   [queryParams]="disabled ? undefined : query"
-   [routerLink]="disabled ? undefined : link"
-   [fragment]="disabled ? undefined : fragment"
-   [routerLinkActive]="highlightActiveLink ? 'active' : []"
-   [class.highlight-active-link]="highlightActiveLink"
-   [class.center]="center !== false"
-   class="not">
-  <ng-container *ngTemplateOutlet="tmpl"></ng-container>
-  {{label}}
-</a>
-</ng-template>
-
-<ng-template #withoutLink>
-  <button [class.center]="center !== false">
+@if (isHref(link)) {
+  <a
+    [href]="disabled ? undefined : link"
+    [class.center]="center !== false"
+    class="not">
     <ng-container *ngTemplateOutlet="tmpl"></ng-container>
     {{label}}
-  </button>
-</ng-template>
+  </a>
+} @else {
+  @if (link) {
+    <a
+      [queryParams]="disabled ? undefined : query"
+      [routerLink]="disabled ? undefined : link"
+      [fragment]="disabled ? undefined : fragment"
+      [routerLinkActive]="highlightActiveLink ? 'active' : []"
+      [class.highlight-active-link]="highlightActiveLink"
+      [class.center]="center !== false"
+      class="not">
+      <ng-container *ngTemplateOutlet="tmpl"></ng-container>
+      {{label}}
+    </a>
+  } @else {
+    <button [class.center]="center !== false">
+      <ng-container *ngTemplateOutlet="tmpl"></ng-container>
+      {{label}}
+    </button>
+  }
+}
+
+
 
 <ng-template #tmpl>
   <ng-content></ng-content>

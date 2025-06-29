@@ -1,10 +1,10 @@
 import {Component, HostBinding, Input} from '@angular/core';
-import {CommonModule} from '@angular/common';
+
 import {Notification} from "../notification.domain";
 
 @Component({
     selector: 'feel-notification',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './notification.component.html',
     styleUrls: ['./notification.component.scss']
 })

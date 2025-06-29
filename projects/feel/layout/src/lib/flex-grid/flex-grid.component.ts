@@ -1,9 +1,9 @@
 import {Component, HostBinding, Input} from '@angular/core';
-import {CommonModule} from '@angular/common';
+
 
 @Component({
     selector: 'feel-flex-grid',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './flex-grid.component.html',
     styleUrls: ['./flex-grid.component.scss']
 })

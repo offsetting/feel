@@ -1,10 +1,10 @@
 import {AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild} from '@angular/core';
-import {CommonModule} from '@angular/common';
+
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
     selector: 'feel-checkbox',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './checkbox.component.html',
     styleUrls: ['./checkbox.component.scss'],
     providers: [{ provide: NG_VALUE_ACCESSOR, multi: true, useExisting: CheckboxComponent }]

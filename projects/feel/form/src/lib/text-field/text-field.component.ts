@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild} from '@angular/core';
-import {CommonModule} from '@angular/common';
+
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import {TextFieldModule} from "@angular/cdk/text-field";
 
@@ -7,7 +7,7 @@ export type FieldType = "text" | "multiline" | "number" | "date" | "password" | 
 
 @Component({
     selector: 'feel-text-field',
-    imports: [CommonModule, TextFieldModule],
+    imports: [TextFieldModule],
     templateUrl: './text-field.component.html',
     styleUrls: ['./text-field.component.scss'],
     // see https://github.com/angular/angular/blob/master/packages/forms/src/directives/default_value_accessor.ts
