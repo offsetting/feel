@@ -4,6 +4,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  &:focus-visible {
+    outline: 0.15rem solid $c-accent;
+    outline-offset: 0.2rem;
+  }
 }
 
 body {
@@ -14,6 +19,18 @@ body {
 ::selection {
   background-color: $c-primary;
   color: $c-secondary;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @import "./styles/font";

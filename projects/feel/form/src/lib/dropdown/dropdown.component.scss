@@ -6,7 +6,6 @@
     flex-direction: column;
 
     select {
-      outline: none;
       background-color: $c-page;
       border: calc(0.15 * $s-unit) solid $c-page;
       padding: calc(0.4 * $s-unit);

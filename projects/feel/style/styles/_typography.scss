@@ -63,7 +63,6 @@ $spacing: calc(0.5 * $s-unit);
 .typography a, a.typography {
   &:not(:has(code)), code {
     color: $f-color;
-    outline: none;
     text-decoration: none;
     border-bottom: calc(.15 * $s-unit) solid $c-primary;
 
