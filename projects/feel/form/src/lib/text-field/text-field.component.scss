@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
 
-    input, textarea {
+    input,
+    textarea {
       background-color: $c-page;
       border: calc(0.15 * $s-unit) solid $c-page;
       padding: calc(0.4 * $s-unit);
@@ -20,7 +21,9 @@
     }
 
     &:hover {
-      input, textarea {
+
+      input,
+      textarea {
         background-color: $c-card-secondary;
         border-color: $c-card-secondary;
       }
@@ -28,9 +31,13 @@
   }
 
   &.ng-touched.ng-dirty {
-    &.ng-invalid, &.own-dirty {
+
+    &.ng-invalid,
+    &.own-dirty {
       label {
-        input, textarea {
+
+        input,
+        textarea {
           border-color: $c-danger-d;
         }
       }
@@ -38,8 +45,14 @@
   }
 
   &:focus-within label {
-    input, textarea {
+
+    input,
+    textarea {
       border-color: $c-primary;
+
+      &:focus-within {
+        outline: none;
+      }
     }
   }
 }
