@@ -17,6 +17,7 @@ export class TextFieldComponent implements ControlValueAccessor, AfterViewInit {
 
   @Input() public label: string | undefined;
   @Input() public type: FieldType = "text";
+  @Input() public autofocus: boolean = false;
 
   protected onChangeFn: ((checked: string | number | Date | null | undefined) => void) | undefined;
   protected onTouchedFn: (() => void) | undefined;

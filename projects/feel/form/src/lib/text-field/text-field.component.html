@@ -6,9 +6,18 @@
       (blur)="onBlur()"
       (input)="onInput()"
       [cdkAutosizeMinRows]="3"
-    cdkTextareaAutosize></textarea>
+      cdkTextareaAutosize
+      [autofocus]="autofocus"
+    >
+    </textarea>
   } @else {
-    <input #input (blur)="onBlur()" (input)="onInput()" [type]="type">
+    <input
+      #input
+      (blur)="onBlur()"
+      (input)="onInput()"
+      [type]="type"
+      [autofocus]="autofocus"
+    >
   }
 
   <ng-content select="feel-form-error"/>
