@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4.1.0
 
       - uses: actions/setup-node@v4
@@ -31,7 +31,7 @@ jobs:
   #        node: [ 18 ]
   #
   #    steps:
-  #      - uses: actions/checkout@v4
+  #      - uses: actions/checkout@v5
   #      - uses: pnpm/action-setup@v4.1.0
   #
   #      - uses: actions/setup-node@v4
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4.1.0
 
       - name: Find Version
@@ -89,7 +89,7 @@ jobs:
         module: [ style, notification, form, layout ]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4.1.0
 
       - uses: actions/download-artifact@v4
