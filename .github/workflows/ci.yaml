@@ -92,7 +92,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4.2.0
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: feel
           path: dist
