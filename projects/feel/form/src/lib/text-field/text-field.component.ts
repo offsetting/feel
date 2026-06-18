@@ -38,6 +38,7 @@ export class TextFieldComponent implements ControlValueAccessor, AfterViewInit {
     if (field) {
       if (this.cachedValue !== undefined && this.cachedDisabledState !== null) this.setValue(this.cachedValue);
       if (this.cachedDisabledState) this.renderer2.setProperty(field.nativeElement, "disabled", this.cachedDisabledState);
+      if (this.autofocus) field.nativeElement.focus();
     }
   }
 
