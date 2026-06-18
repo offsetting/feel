@@ -1,4 +1,4 @@
-import {Component, HostBinding, Input} from '@angular/core';
+import {Component, HostBinding, Input, ChangeDetectionStrategy} from '@angular/core';
 
 import {Notification} from "../notification.domain";
 
@@ -6,6 +6,7 @@ import {Notification} from "../notification.domain";
     selector: 'feel-notification',
     imports: [],
     templateUrl: './notification.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./notification.component.scss']
 })
 export class NotificationComponent {

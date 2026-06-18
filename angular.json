@@ -167,6 +167,23 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "testing": {
+              "aot": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "styles": [
+                "node_modules/@fontsource/dm-sans/400.css",
+                "node_modules/@fontsource/dm-sans/400-italic.css",
+                "node_modules/@fontsource/dm-sans/700.css",
+                "node_modules/@fontsource/dm-sans/700-italic.css",
+                "projects/homepage/src/styles.scss",
+                "projects/homepage/src/styles.scss"
+              ],
+              "polyfills": [
+                "zone.js",
+                "zone.js/testing"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -190,33 +207,11 @@
           }
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "projects/homepage/tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/homepage/src/favicon.ico",
-              "projects/homepage/src/assets"
-            ],
-            "styles": [
-              "node_modules/@fontsource/dm-sans/400.css",
-              "node_modules/@fontsource/dm-sans/400-italic.css",
-              "node_modules/@fontsource/dm-sans/700.css",
-              "node_modules/@fontsource/dm-sans/700-italic.css",
-              "projects/homepage/src/styles.scss",
-              "projects/homepage/src/styles.scss"
-            ],
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "dist/feel/style/global",
-                "projects/homepage/src/scss/global"
-              ]
-            },
-            "scripts": []
+            "buildTarget": ":build:testing",
+            "runner": "vitest"
           }
         }
       }

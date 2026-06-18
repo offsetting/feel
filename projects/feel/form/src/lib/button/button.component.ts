@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, HostBinding, Input, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 
@@ -8,6 +8,7 @@ export type ButtonFlavor = "good" | "danger" | "accent";
     selector: 'feel-button',
     imports: [CommonModule, RouterLink, RouterLinkActive],
     templateUrl: './button.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {

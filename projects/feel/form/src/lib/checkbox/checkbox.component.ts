@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
@@ -7,6 +7,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
     imports: [],
     templateUrl: './checkbox.component.html',
     styleUrls: ['./checkbox.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [{ provide: NG_VALUE_ACCESSOR, multi: true, useExisting: CheckboxComponent }]
 })
 export class CheckboxComponent implements ControlValueAccessor, AfterViewInit {

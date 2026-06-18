@@ -22,10 +22,10 @@
       <feel-button (click)="notificationExample()" label="Example"/>
 
       <form [formGroup]="form">
-        <feel-dropdown formControlName="drow" label="DropDown Menus">
-          <feel-option value="angular" label="Angular"/>
-          <feel-option value="react" label="React"/>
-          <feel-option value="gmx" label="GMX"/>
+        <feel-dropdown formControlName="drop" label="DropDown Menus">
+          <option value="angular">Angular</option>
+          <option value="react">React</option>
+          <option value="gmx">GMX</option>
         </feel-dropdown>
 
         <feel-text-field formControlName="" label="Textfeld"/>

@@ -4,19 +4,18 @@
   "compilerOptions": {
     "paths": {
       "@feel/form": [
-        "dist/feel/form"
+        "./dist/feel/form"
       ],
       "@feel/layout": [
-        "dist/feel/layout"
+        "./dist/feel/layout"
       ],
       "@feel/notification": [
-        "dist/feel/notification"
+        "./dist/feel/notification"
       ],
       "@feel/style": [
-        "dist/feel/style"
+        "./dist/feel/style"
       ]
     },
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

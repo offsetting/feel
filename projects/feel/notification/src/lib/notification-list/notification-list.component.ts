@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NotificationService} from "../notification.service";
 import {Notification} from "../notification.domain";
@@ -10,6 +10,7 @@ import {NotificationComponent} from "../notification/notification.component";
     imports: [CommonModule, NotificationComponent],
     templateUrl: './notification-list.component.html',
     styleUrls: ['./notification-list.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     animations: [fadeAnimation]
 })
 export class NotificationListComponent {

@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ButtonComponent, DropdownComponent, TextFieldComponent, OptionComponent} from "@feel/form";
+import {ButtonComponent, DropdownComponent, TextFieldComponent} from "@feel/form";
 import {NotificationListComponent} from "@feel/notification";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FlexGridComponent} from "@feel/layout";
@@ -29,7 +29,6 @@ import {ReactiveFormsModule} from "@angular/forms";
     IconDashboardComponent,
     TextFieldComponent,
     DropdownComponent,
-    OptionComponent,
     ReactiveFormsModule,
   ],
   providers: [],

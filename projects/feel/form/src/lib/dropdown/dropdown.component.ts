@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 
@@ -8,6 +8,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
     templateUrl: './dropdown.component.html',
     styleUrls: ['./dropdown.component.scss'],
     // see https://github.com/angular/angular/blob/master/packages/forms/src/directives/default_value_accessor.ts
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [{ provide: NG_VALUE_ACCESSOR, multi: true, useExisting: DropdownComponent }]
 })
 export class DropdownComponent implements ControlValueAccessor, AfterViewInit {

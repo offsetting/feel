@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import {TextFieldModule} from "@angular/cdk/text-field";
@@ -11,6 +11,7 @@ export type FieldType = "text" | "multiline" | "number" | "date" | "password" | 
     templateUrl: './text-field.component.html',
     styleUrls: ['./text-field.component.scss'],
     // see https://github.com/angular/angular/blob/master/packages/forms/src/directives/default_value_accessor.ts
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [{ provide: NG_VALUE_ACCESSOR, multi: true, useExisting: TextFieldComponent }]
 })
 export class TextFieldComponent implements ControlValueAccessor, AfterViewInit {
